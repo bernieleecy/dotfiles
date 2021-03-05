@@ -1,0 +1,344 @@
+snippet setup "Basic document setup" b
+\documentclass[a4paper]{article}
+
+% package imports {{{ 
+\usepackage[margin=1in]{geometry}
+\usepackage{parskip}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\graphicspath{{images/}{si_images/}}
+\usepackage{tabulary}
+\usepackage{booktabs}
+\usepackage{listings}
+\usepackage{fancyhdr}
+\usepackage[version=4]{mhchem}
+\usepackage{siunitx}
+\sisetup{group-digits=integer,separate-uncertainty=true,multi-part-units=single}
+\usepackage[hidelinks]{hyperref} 
+\usepackage[scaled=0.8]{beramono} % This is nice because the tilde isn't at the top of the line.
+\usepackage[T1]{fontenc}
+\usepackage{caption} 
+\usepackage{subcaption} 
+\captionsetup{font=small,labelfont=bf,belowskip=-0.4cm}
+\captionsetup[subfigure]{justification=justified,singlelinecheck=on}
+\usepackage{titling}
+\usepackage{float}
+\usepackage[Symbolsmallscale]{upgreek}
+\usepackage{setspace}
+\usepackage{verbatim}
+\onehalfspacing
+\usepackage{minted} 
+\usemintedstyle{xcode}
+% }}} 
+
+% commands {{{ 
+\renewcommand{\arraystretch}{1.2}
+$1
+% }}} 
+
+$2
+
+% Page style {{{ 
+\pagestyle{fancy}
+\fancyhead[R]{${3:DATE}}
+\fancyhead[C]{${4:Theme}}
+\fancyhead[L]{Bernie Lee} 
+\setlength{\droptitle}{-1.0 cm}
+% }}}
+
+\begin{document}
+\thispagestyle{fancy} 
+
+\begin{center}
+	\Large\textbf{$5}\par
+	\normalsize Last updated: \today
+\end{center} 
+
+\end{document}
+endsnippet
+
+snippet codeblocks "Templates for code snippets and summaries" b
+% Tcb listings for code {{{ 
+\usepackage{tcolorbox}
+\tcbuselibrary{listings,breakable}
+\lstdefinestyle{tcbscript}{language={},
+     belowskip=1pt, aboveskip=1pt,
+     columns=fullflexible, keepspaces=true,
+     breaklines=true, breakatwhitespace=true,
+     basicstyle=\ttfamily\small, extendedchars=true, nolol
+     }
+\newtcblisting{script}[1]{
+    title=#1,
+    fontupper=\ttfamily,
+    fonttitle=\bfseries,
+    colframe=blue!60!gray,
+    colback=blue!5,
+    width=0.95\textwidth,
+    center,
+    listing only,
+    listing style=tcbscript,
+    beforeafter skip=0.45cm,
+	breakable
+}
+\newtcblisting{cmdline}{
+    fontupper=\ttfamily,
+    colframe=white, opacityframe=0, % transparent
+    colback=white, opacityback=0, % transparent
+    width=0.95\textwidth,
+    center,
+    listing only,
+    listing style=tcbscript,
+    beforeafter skip=-0.05cm,
+	breakable
+}
+\newtcolorbox{summary}[0]{
+    center,
+    width=0.95\textwidth,
+    colback=red!5!white,
+    colframe=red!75!black,
+    fonttitle=\bfseries,
+    title=Summary,
+    beforeafter skip=0.45cm
+}
+% }}} 
+endsnippet 
+
+snippet epicommands "New commands for epigenetic terms" b
+\newcommand{\Me}[1]{Me\textsubscript{#1}}
+endsnippet
+
+snippet delcommands "New commands for delta values" b 
+\newcommand{\Delsub}[1]{$\Delta G_\mathrm{#1}$}
+endsnippet
+
+snippet supplement "For sup figures and tables" b
+\newcommand{\beginsupplement}{%
+        \setcounter{table}{0}
+        \renewcommand{\thetable}{S\arabic{table}}%
+        \setcounter{figure}{0}
+        \renewcommand{\thefigure}{S\arabic{figure}}%
+     }
+endsnippet
+
+snippet acs "ACS biblio style" b 
+% Bibliography imports {{{ 
+\usepackage[style=chem-acs, biblabel=dot, subentry]{biblatex} 
+\addbibresource{${1:ref.bib}}
+% }}}
+endsnippet
+
+snippet emplotting "Standard command for plotting EM graph" 
+gmx energy -f em.edr -o potential.xvg 
+python xvg_plot.py -f potential.xvg -x "Energy minimisation step" -y "Potential Energy (kJ/mol)" 
+endsnippet
+
+snippet nvtgrompp "Command for NVT equilibration"  
+gmx grompp -f nvt.mdp -c ../3-min/em.gro -r ../3-min/em.gro -p ../0-top/topol.top -o nvt.tpr 
+endsnippet 
+
+snippet nptgrompp "Command for NPT equilibration"  
+gmx grompp -f npt.mdp -c ../4-nvt/nvt.gro -r ../4-nvt/nvt.gro -t ../4-nvt/nvt.cpt -p ../0-top/topol.top -o npt.tpr 
+endsnippet 
+
+snippet mdgrompp "Grompp command for MD run"  
+gmx grompp -f md.mdp -c ../5-npt/npt.gro -t ../5-npt/npt.cpt -p ../0-top/topol.top -o md_1.tpr 
+endsnippet
+
+snippet fig "Figure environment" b
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=$2\linewidth]{$3}
+	\caption{$4} 
+	\label{fig:$5} 
+\end{figure}
+endsnippet
+
+snippet table "Table environment" b
+\begin{table}[H]
+	\centering
+	\begin{tabular}{${1:cols}}
+		\toprule 
+		${2:titles}
+		\midrule
+		$3
+		\bottomrule
+	\end{tabular}
+	\caption{$4}
+	\label{tab:$5} 
+\end{table}
+endsnippet
+
+snippet tabulary "Tabulary environment" b
+\begin{table}[H]
+	\centering
+	\begin{tabulary}{$1\linewidth}{${2:cols}}
+		\toprule
+		${3:titles}
+		\midrule
+		$4
+		\bottomrule
+	\end{tabulary}
+	\caption{$5}
+	\label{tab:$6} 
+\end{table}
+endsnippet
+
+snippet ve "Verb environment" w
+\verb|$1|
+endsnippet
+
+snippet texor "texorpdfstring" Ai
+\texorpdfstring{$1}{$2}
+endsnippet
+
+snippet \upb "upbeta" Ai
+$\upbeta$
+endsnippet 
+
+snippet \upa "upalpha" Ai
+$\upalpha$
+endsnippet
+
+snippet \uppi "uppi" Ai
+$\uppi$
+endsnippet
+
+snippet \upthe "uptheta" Ai
+$\uptheta$
+endsnippet
+
+snippet \uppsi "uppsi" Ai
+$\uppsi$
+endsnippet
+
+snippet si "SI environment" i
+\SI{$1}{$2}
+endsnippet
+
+snippet cmdline "command line env" Ab
+\begin{cmdline}
+	$1
+\end{cmdline}
+endsnippet
+
+snippet script "script env" Ab
+\begin{script}{$1}
+	$2
+\end{script}
+endsnippet
+
+snippet item "itemize env" Ab
+\begin{itemize}
+	$1
+\end{itemize}
+endsnippet
+
+snippet enum "enumerate env" Ab
+\begin{enumerate}
+	$1
+\end{enumerate}
+endsnippet
+
+snippet sec "section heading without label" Ab
+\section{$1}
+endsnippet
+
+snippet subsec "subsection heading without label" Ab
+\subsection{$1}
+endsnippet
+
+snippet subsubsec "subsubsection heading without label" Ab 
+\subsubsection{$1} 
+endsnippet
+
+snippet lsec "section heading with label" Ab
+\section{$1}
+\label{sec:$2}
+endsnippet
+
+snippet lsubsec "subsection heading with label" Ab
+\subsection{$1}
+\label{subsec:$2}
+endsnippet
+
+snippet lsubsubsec "subsubsection heading with label" Ab
+\subsubsection{$1}
+\label{subsubsec:$2} 
+endsnippet
+
+snippet ac "autocite" i
+\autocite{$1}
+endsnippet
+
+snippet bd "bromodomain" i
+bromodomain
+endsnippet
+
+snippet nvtfig "Standard nvt equilibration graph" b 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.45\linewidth]{$1}
+	\caption{NVT equilibration, average temperature of \SI{$2}{K}}
+	\label{fig:$3} 
+\end{figure} 
+endsnippet
+
+snippet nptfigs "Standard npt equilibration graphs" b
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[t]{0.45\linewidth}
+		\includegraphics[width=\linewidth]{$1}
+		\caption{NPT pressure graph, average pressure of \SI{$2}{bar}}
+	\end{subfigure}
+	\hspace{2mm}
+	\begin{subfigure}[t]{0.45\linewidth}
+		\includegraphics[width=\linewidth]{$3}
+		\caption{NPT density graph, average density of \SI{$4}{kg/m^3}}
+	\end{subfigure}
+	\vspace{2mm}
+	\caption{Graphs for NPT equilibration}
+	\label{fig:$5} 
+\end{figure}
+endsnippet
+
+snippet triplot "3 plots" b
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[t]{0.45\linewidth}
+		\includegraphics[width=\linewidth]{$1}
+	\end{subfigure}
+	\hspace{4mm}
+	\begin{subfigure}[t]{0.45\linewidth}
+		\includegraphics[width=\linewidth]{$2}
+	\end{subfigure}
+	\hspace{4mm}
+	\begin{subfigure}[t]{0.45\linewidth}
+		\includegraphics[width=\linewidth]{$3}
+	\end{subfigure}
+	\caption{$4}
+	\label{fig:$5}
+\end{figure}
+endsnippet 
+
+snippet double_plot "2 plots side by side" b
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[t]{0.45\linewidth}
+		\includegraphics[width=\linewidth]{$1}
+		\caption{$2}
+	\end{subfigure}
+	\hspace{2mm}
+	\begin{subfigure}[t]{0.45\linewidth}
+		\includegraphics[width=\linewidth]{$3}
+		\caption{$4}
+	\end{subfigure}
+	\vspace{4mm}
+	\caption{$5}
+	\label{fig:$6}
+\end{figure}
+endsnippet
+
+snippet divider "divider to help me see breaks between sections" b
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+endsnippet 

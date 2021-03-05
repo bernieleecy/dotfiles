@@ -1,0 +1,1 @@
+command! -buffer Toc VimtexTocOpen

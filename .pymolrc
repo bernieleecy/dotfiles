@@ -1,0 +1,21 @@
+bg_color white
+window maximize
+set orthoscopic
+set line_width, 6
+set ambient, 0.3
+set line_as_cylinders, on
+set opaque_background, off
+set dash_color, gray
+set dash_transparency, 0.2
+set mesh_color, gray
+set angle_color, gray
+set angle_size, 0.5
+set mesh_width, 0.2
+set ray_shadow, 0
+set ray_trace_mode, 1
+set cartoon_fancy_helices, 1
+set cartoon_highlight_color, gray70
+
+alias pretty_pic, set transparency, 0.4; set sphere_transparency, 0.4
+alias snapshot, ray 1000,1000
+alias color_objs, run ~/bin/pymol_scripts/color_objs.pml

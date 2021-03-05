@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =7
+let g:netrw_dirhist_7='/Users/bernadettelee/Documents/DPhil/QM/TMA-indole-cationpi/2020.11.03_catpi'
+let g:netrw_dirhist_6='/Users/bernadettelee/Documents/DPhil/.git'
+let g:netrw_dirhist_5='/Users/bernadettelee/Documents/TRIM/MD_runs/grad_posre_scripts'
+let g:netrw_dirhist_4='/Users/bernadettelee/Documents/TRIM/TRIM33b/TRIM33b_MD_water'
+let g:netrw_dirhist_3='/Users/bernadettelee/Documents/Rotation2_notes/.git'
+let g:netrw_dirhist_2='/Users/bernadettelee/Documents/Rotation2_notes/TRIM_analysis'
+let g:netrw_dirhist_1='/Users/bernadettelee/Documents/Rotation2_notes/TRIM_analysis/2020.08.23_water_density'
+let g:netrw_dirhist_0='/Users/bernadettelee/.vim/ftplugin'
+let g:netrw_dirhist_9='/Users/bernadettelee/Documents/TRIM/MD_runs/2020.07.24_alt_complex_1/6-md/pdb_files/test25'
+let g:netrw_dirhist_8='/Users/bernadettelee/Documents/TRIM/MD_runs/2020.07.24_alt_complex_1/6-md/pdb_files/test00'
