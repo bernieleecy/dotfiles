@@ -1,4 +1,5 @@
 set number
+set fillchars=fold:\ 
 set autoindent
 set noshowmode " for use with jedi-vim show_call_signatures = 2
 set backspace=indent,eol,start
