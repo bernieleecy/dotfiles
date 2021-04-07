@@ -26,10 +26,13 @@ snippet setup "Basic document setup" b
 \usepackage{float}
 \usepackage[Symbolsmallscale]{upgreek}
 \usepackage{setspace}
-\usepackage{verbatim}
+\usepackage{fancyvrb}
+\RecustomVerbatimCommand{\VerbatimInput}{VerbatimInput}%
+{fontsize=\small,}
 \onehalfspacing
 \usepackage{minted} 
 \usemintedstyle{xcode}
+\setminted{fontsize=\small}
 % }}} 
 
 % commands {{{ 
