@@ -1,4 +1,6 @@
 .vim/plugged/
 .vim/pack/
 .bash_profile
+.gitconfig
+.bashrc
 **/.DS_Store

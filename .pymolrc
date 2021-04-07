@@ -5,7 +5,7 @@ set line_width, 6
 set ambient, 0.3
 set line_as_cylinders, on
 set opaque_background, off
-set dash_color, gray
+set dash_color, black
 set dash_transparency, 0.2
 set mesh_color, gray
 set angle_color, gray
