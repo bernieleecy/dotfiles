@@ -7,7 +7,8 @@ files=(".vimrc" \
     ".bashrc" \
     ".config" \
     ".pymolrc" \
-    ".vmdrc" 
+    ".vmdrc" \
+    ".git-completion.bash" \
 )
 DOTFILES="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 for f in ${files[@]}; do
