@@ -71,6 +71,30 @@ snippet codeblocks "Templates for code snippets and summaries" b
      breaklines=true, breakatwhitespace=true,
      basicstyle=\ttfamily\small, extendedchars=true, nolol
      }
+\newtcblisting{cmdline}{
+    fontupper=\ttfamily,
+    colframe=white, opacityframe=0, % transparent
+    colback=white, opacityback=0, % transparent
+    width=0.95\textwidth,
+    center,
+    listing only,
+    listing style=tcbscript,
+    beforeafter skip=-0.05cm,
+	breakable
+}
+% }}} 
+endsnippet 
+
+snippet full_codeblocks "All templates for code snippets and summaries" b
+% Tcb listings for code {{{ 
+\usepackage{tcolorbox}
+\tcbuselibrary{listings,breakable}
+\lstdefinestyle{tcbscript}{language={},
+     belowskip=1pt, aboveskip=1pt,
+     columns=fullflexible, keepspaces=true,
+     breaklines=true, breakatwhitespace=true,
+     basicstyle=\ttfamily\small, extendedchars=true, nolol
+     }
 \newtcblisting{script}[1]{
     title=#1,
     fontupper=\ttfamily,

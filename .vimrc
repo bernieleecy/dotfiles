@@ -1,4 +1,5 @@
 set number
+set gfn=Monaco:h12
 set fillchars=fold:\ 
 set autoindent
 set noshowmode " for use with jedi-vim show_call_signatures = 2
@@ -123,6 +124,7 @@ let g:vimtex_compiler_latexmk = {
     \   '-interaction=nonstopmode',
     \ ],
     \}
+let g:vimtex_view_method = 'skim'
 
 "" Syntax sync -- for long files where vim gets confused
 nnoremap <leader>ssf :syntax sync fromstart<CR>
