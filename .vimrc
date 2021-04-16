@@ -73,8 +73,7 @@ set t_Co=256
 function ToggleColors()
     if &background == "dark"
         set background=light
-        let g:seoul256_background = 252
-        colorscheme seoul256-light
+        colorscheme papercolor
     else 
         set background=dark
         colorscheme palenight
