@@ -1,3 +1,26 @@
+snippet presetup "Document setup with preamble input" b
+\documentclass[a4paper]{article}
+\input{${1:Preamble tex file}}
+
+% Page style {{{ 
+\pagestyle{fancy}
+\fancyhead[R]{${2:DATE}}
+\fancyhead[C]{${3:Theme}}
+\fancyhead[L]{Bernie Lee} 
+\setlength{\droptitle}{-1.0 cm}
+% }}}
+
+\begin{document}
+\thispagestyle{fancy} 
+
+\begin{center}
+	\Large\textbf{$4}\par
+	\normalsize Last updated: \today
+\end{center} 
+
+\end{document}
+endsnippet 
+
 snippet setup "Basic document setup" b
 \documentclass[a4paper]{article}
 
