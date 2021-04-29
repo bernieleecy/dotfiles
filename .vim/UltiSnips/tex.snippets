@@ -39,6 +39,7 @@ snippet setup "Basic document setup" b
 \usepackage{siunitx}
 \sisetup{group-digits=integer,separate-uncertainty=true,multi-part-units=single}
 \usepackage[hidelinks]{hyperref} 
+\usepackage[noabbrev,capitalise]{cleveref}
 \usepackage[scaled=0.8]{beramono} % This is nice because the tilde isn't at the top of the line.
 \usepackage[T1]{fontenc}
 \usepackage{caption} 
@@ -51,7 +52,7 @@ snippet setup "Basic document setup" b
 \usepackage{setspace}
 \usepackage{fancyvrb}
 \RecustomVerbatimCommand{\VerbatimInput}{VerbatimInput}%
-{fontsize=\small,}
+{fontsize=\small,xleftmargin=0.6in}
 \onehalfspacing
 \usepackage{minted} 
 \usemintedstyle{xcode}
