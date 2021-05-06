@@ -34,6 +34,7 @@ snippet setup "Basic document setup" b
 \usepackage{tabulary}
 \usepackage{booktabs}
 \usepackage{listings}
+\lstset{basicstyle=\ttfamily\small, columns=fullflexible, breaklines=true} 
 \usepackage{fancyhdr}
 \usepackage[version=4]{mhchem}
 \usepackage{siunitx}
@@ -52,7 +53,7 @@ snippet setup "Basic document setup" b
 \usepackage{setspace}
 \usepackage{fancyvrb}
 \RecustomVerbatimCommand{\VerbatimInput}{VerbatimInput}%
-{fontsize=\small,xleftmargin=0.6in}
+{fontsize=\small,}
 \onehalfspacing
 \usepackage{minted} 
 \usemintedstyle{xcode}
