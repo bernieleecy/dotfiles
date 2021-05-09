@@ -45,6 +45,7 @@ Plug 'drewtempelmeyer/palenight.vim'
 Plug 'preservim/nerdtree'
 Plug 'davidhalter/jedi-vim'
 Plug 'TaDaa/vimade'
+Plug 'yongrenjie/abbotsbury.vim'
 
 call plug#end()
 
@@ -107,6 +108,7 @@ set conceallevel=2
 let g:tex_conceal='abdmg'
 let g:jedi#popup_on_dot = 0
 let g:jedi#show_call_signatures = 2
+let g:abbot_use_git_email = 1
 
 set laststatus=2
 let g:lightline = {
