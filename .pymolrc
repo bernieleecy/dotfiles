@@ -19,3 +19,4 @@ set cartoon_highlight_color, gray70
 alias pretty_pic, set transparency, 0.4; set sphere_transparency, 0.4
 alias snapshot, ray 1000,1000
 alias color_objs, run ~/bin/pymol_scripts/color_objs.pml
+alias proc_organics, run ~/bin/pymol_scripts/proc_organics.pml

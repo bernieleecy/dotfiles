@@ -68,7 +68,7 @@ endif
 
 syntax on
 set background=dark
-let g:sonokai_style = 'andromeda'
+let g:sonokai_style = 'atlantis'
 colorscheme sonokai
 "colorscheme palenight
 set t_Co=256
