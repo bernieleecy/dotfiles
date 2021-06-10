@@ -94,7 +94,7 @@ let g:abbot_use_git_email = 1
 
 set laststatus=2
 let g:lightline = {
-      \ 'colorscheme': 'embark',
+      \ 'colorscheme': 'palenight',
       \ }
 
 "" Syntax sync -- for long files where vim gets confused
