@@ -46,6 +46,7 @@ Plug 'preservim/nerdtree'
 Plug 'davidhalter/jedi-vim'
 Plug 'TaDaa/vimade'
 Plug 'yongrenjie/abbotsbury.vim'
+Plug 'sainnhe/sonokai' 
 
 call plug#end()
 
@@ -61,13 +62,15 @@ if (has("termguicolors"))
   set termguicolors
 endif
 
-let g:palenight_color_overrides = {
-\    'black': { 'gui': '#1D1C1F', "cterm": "234", "cterm16": "0" },
-\}
+"let g:palenight_color_overrides = {
+"\    'black': { 'gui': '#1D1C1F', "cterm": "234", "cterm16": "0" },
+"\}
 
 syntax on
 set background=dark
-colorscheme palenight
+let g:sonokai_style = 'andromeda'
+colorscheme sonokai
+"colorscheme palenight
 set t_Co=256
 "highlight Folded ctermbg=96 ctermfg=7
 "
