@@ -220,6 +220,15 @@ snippet table "Table environment" b
 \end{table}
 endsnippet
 
+snippet inptable "Input table from tex file" b
+\begin{table}[H]
+	\centering
+	\input{${1:table tex file}}
+	\caption{$2}
+	\label{tab:$3} 
+\end{table}
+endsnippet
+
 snippet tabulary "Tabulary environment" b
 \begin{table}[H]
 	\centering
