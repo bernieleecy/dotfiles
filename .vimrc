@@ -91,6 +91,10 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 let g:UltiSnipsEditSplit="vertical"
 "set conceallevel=2
 let g:abbot_use_git_email = 1
+"Ignore tex auxiliary files in NERDTree
+let NERDTreeIgnore = ['\.aux$', '\.log$', '\.out$', '\.fls$','\.pdf$',
+                     \ '\.fdb_latexmk$', '\.synctex\.gz$', '\.listing$',
+                     \ '\.bbl$', '\.bcf$', '\.blg$', '\.toc$', '\.run\.xml$']
 
 set laststatus=2
 let g:lightline = {
