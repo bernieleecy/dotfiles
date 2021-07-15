@@ -46,8 +46,7 @@ Plug 'davidhalter/jedi-vim'
 Plug 'yongrenjie/abbotsbury.vim'
 Plug 'sainnhe/sonokai' 
 Plug 'adrian5/oceanic-next-vim'
-Plug 'embark-theme/vim', { 'as': 'embark' }
-Plug 'bluz71/vim-embark-guicolors'
+Plug 'embark-theme/vim', { 'as': 'embark' , 'branch': 'main'}
 
 call plug#end()
 
