@@ -1,0 +1,12 @@
+snippet monomer_opt_b3lyp "Orca input file template for monomer optimisation b3lyp" 
+# Date: ${1:Date} 
+# Optimisation for: ${2:Monomer}
+# Comments: ${3:Eg comment on alignment} 
+
+! B3LYP def2-TZVP D3BJ Opt FREQ 
+%pal
+nprocs 16
+end
+
+${4:coordinates} 
+endsnippet

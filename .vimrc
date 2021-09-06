@@ -2,7 +2,6 @@ set number
 set gfn=Monaco:h12
 "set fillchars=fold:\ 
 set autoindent
-set noshowmode " for use with jedi-vim show_call_signatures = 2
 set backspace=indent,eol,start
 filetype plugin indent on
 set autochdir
@@ -42,7 +41,6 @@ Plug 'vim-python/python-syntax'
 Plug 'tmhedberg/SimpylFold'
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'preservim/nerdtree'
-Plug 'davidhalter/jedi-vim'
 Plug 'yongrenjie/abbotsbury.vim'
 Plug 'sainnhe/sonokai' 
 Plug 'adrian5/oceanic-next-vim'
@@ -88,7 +86,6 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 let g:UltiSnipsEditSplit="vertical"
-"set conceallevel=2
 let g:abbot_use_git_email = 1
 "Ignore tex auxiliary files in NERDTree
 let NERDTreeIgnore = ['\.aux$', '\.log$', '\.out$', '\.fls$','\.pdf$',

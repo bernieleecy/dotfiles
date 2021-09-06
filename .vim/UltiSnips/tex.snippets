@@ -21,71 +21,6 @@ snippet presetup "Document setup with preamble input" b
 \end{document}
 endsnippet 
 
-snippet setup "Basic document setup" b
-\documentclass[a4paper]{article}
-
-% package imports {{{ 
-\usepackage[margin=1in]{geometry}
-\usepackage{parskip}
-\usepackage{amsmath}
-\usepackage{enumitem}
-\usepackage{graphicx}
-\graphicspath{{images/}{si_images/}}
-\usepackage{tabulary}
-\usepackage{booktabs}
-\usepackage{listings}
-\lstset{basicstyle=\ttfamily\small, columns=fullflexible, breaklines=true} 
-\usepackage{fancyhdr}
-\usepackage[version=4]{mhchem}
-\usepackage{siunitx}
-\sisetup{group-digits=integer,separate-uncertainty=true,multi-part-units=single}
-\usepackage[hidelinks]{hyperref} 
-\usepackage[noabbrev,capitalise]{cleveref}
-\usepackage[scaled=0.8]{beramono} % This is nice because the tilde isn't at the top of the line.
-\usepackage[T1]{fontenc}
-\usepackage{caption} 
-\usepackage{subcaption} 
-\captionsetup{font=small,labelfont=bf,belowskip=-0.4cm}
-\captionsetup[subfigure]{justification=justified,singlelinecheck=on}
-\usepackage{titling}
-\usepackage{float}
-\usepackage[Symbolsmallscale]{upgreek}
-\usepackage{setspace}
-\usepackage{fancyvrb}
-\RecustomVerbatimCommand{\VerbatimInput}{VerbatimInput}%
-{fontsize=\small,}
-\onehalfspacing
-\usepackage{minted} 
-\usemintedstyle{xcode}
-\setminted{fontsize=\small}
-% }}} 
-
-% commands {{{ 
-\renewcommand{\arraystretch}{1.2}
-$1
-% }}} 
-
-$2
-
-% Page style {{{ 
-\pagestyle{fancy}
-\fancyhead[R]{${3:DATE}}
-\fancyhead[C]{${4:Theme}}
-\fancyhead[L]{Bernie Lee} 
-\setlength{\droptitle}{-1.0 cm}
-% }}}
-
-\begin{document}
-\thispagestyle{fancy} 
-
-\begin{center}
-	\Large\textbf{$5}\par
-	\normalsize Last updated: \today
-\end{center} 
-
-\end{document}
-endsnippet
-
 snippet codeblocks "Templates for code snippets and summaries" b
 % Tcb listings for code {{{ 
 \usepackage{tcolorbox}
@@ -397,7 +332,6 @@ snippet double_plot "2 plots side by side" b
 		\includegraphics[width=\linewidth]{$3}
 		\caption{$4}
 	\end{subfigure}
-	\vspace{4mm}
 	\caption{$5}
 	\label{fig:$6}
 \end{figure}

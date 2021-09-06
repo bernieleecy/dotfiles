@@ -12,4 +12,5 @@ let g:vimtex_view_method = 'skim'
 
 let g:vimtex_fold_enabled =1
 let g:vimtex_complete_img_use_tail = 1
-let g:vimtex_syntax_packages={'siunitx': {'load': 0}}
+let g:vimtex_syntax_conceal_default = 0
+let g:vimtex_syntax_packages={'siunitx': {'load': 0}} 
