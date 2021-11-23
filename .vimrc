@@ -45,6 +45,8 @@ Plug 'yongrenjie/abbotsbury.vim'
 Plug 'sainnhe/sonokai' 
 Plug 'adrian5/oceanic-next-vim'
 Plug 'embark-theme/vim', { 'as': 'embark' , 'branch': 'main'}
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
 
 call plug#end()
 
