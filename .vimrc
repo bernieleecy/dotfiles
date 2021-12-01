@@ -43,6 +43,7 @@ Plug 'drewtempelmeyer/palenight.vim'
 Plug 'preservim/nerdtree'
 Plug 'yongrenjie/abbotsbury.vim'
 Plug 'sainnhe/sonokai' 
+Plug 'sainnhe/edge'
 Plug 'adrian5/oceanic-next-vim'
 Plug 'embark-theme/vim', { 'as': 'embark' , 'branch': 'main'}
 Plug 'godlygeek/tabular'
@@ -59,13 +60,13 @@ endif
 "\}
 
 syntax on
-set background=dark
-colorscheme embark
+set background=light
+colorscheme edge
 "
 function ToggleColors()
     if &background == "dark"
         set background=light
-        colorscheme papercolor
+        colorscheme edge
     else 
         set background=dark
         colorscheme embark
@@ -96,7 +97,7 @@ let NERDTreeIgnore = ['\.aux$', '\.log$', '\.out$', '\.fls$','\.pdf$',
 
 set laststatus=2
 let g:lightline = {
-      \ 'colorscheme': 'palenight',
+      \ 'colorscheme': 'edge',
       \ }
 
 "" Syntax sync -- for long files where vim gets confused
