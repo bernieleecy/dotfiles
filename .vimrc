@@ -51,9 +51,9 @@ Plug 'plasticboy/vim-markdown'
 
 call plug#end()
 
-if (has("termguicolors"))
-  set termguicolors
-endif
+"if (has("termguicolors"))
+"  set termguicolors
+"endif
 
 "let g:palenight_color_overrides = {
 "\    'black': { 'gui': '#1D1C1F', "cterm": "234", "cterm16": "0" },
@@ -90,6 +90,7 @@ let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 let g:UltiSnipsEditSplit="vertical"
 let g:abbot_use_git_email = 1
+let g:vim_search_pulse_color_list = [248, 249, 250, 251, 252]
 "Ignore tex auxiliary files in NERDTree
 let NERDTreeIgnore = ['\.aux$', '\.log$', '\.out$', '\.fls$','\.pdf$',
                      \ '\.fdb_latexmk$', '\.synctex\.gz$', '\.listing$',
