@@ -20,6 +20,9 @@ alias pretty_pic, set transparency, 0.4; set sphere_transparency, 0.4
 alias snapshot, ray 1000,1000
 alias color_objs, run ~/bin/pymol_scripts/color_objs.pml
 alias proc_organics, run ~/bin/pymol_scripts/proc_organics.pml
-alias display_t33a_clusters, run /Users/bernadettelee/Documents/DPhil/TRIM/T33A_smallmol_MD/t33a-smallmol-MD-analysis/non_workflow_scripts/process_t33a_clusters.pml
-alias split_t33a_clusters, run /Users/bernadettelee/Documents/DPhil/TRIM/T33A_smallmol_MD/t33a-smallmol-MD-analysis/non_workflow_scripts/split_clusters.pml
-alias recolor_plip_t33a, run /Users/bernadettelee/Documents/DPhil/TRIM/T33A_smallmol_MD/t33a-smallmol-MD-analysis/non_workflow_scripts/recolor_plip_t33a.pml
+
+alias display_t33a_clusters, run /Users/bernadettelee/Documents/DPhil/TRIM/T33_smallmol_MD/t33a-smallmol-MD-analysis/non_workflow_scripts/process_t33a_clusters.pml
+alias split_t33a_clusters, run /Users/bernadettelee/Documents/DPhil/TRIM/T33_smallmol_MD/t33a-smallmol-MD-analysis/non_workflow_scripts/split_clusters.pml
+alias recolor_plip_t33a, run /Users/bernadettelee/Documents/DPhil/TRIM/T33_smallmol_MD/t33a-smallmol-MD-analysis/non_workflow_scripts/recolor_plip_t33a.pml
+alias recolor_docked_plip_t33a, run /Users/bernadettelee/Documents/DPhil/TRIM/T33_docking/scripts/recolor_docked_plip_t33a.pml
+alias t33a_water_density, run /Users/bernadettelee/Documents/DPhil/TRIM/T33_smallmol_MD/t33a-smallmol-MD-analysis/non_workflow_scripts/process_t33a_waters.pml

@@ -33,7 +33,7 @@ Plug 'SirVer/ultisnips'
 Plug 'skywind3000/asyncrun.vim'
 Plug 'machakann/vim-sandwich' 
 Plug 'Vimjas/vim-python-pep8-indent'
-Plug 'inside/vim-search-pulse'
+Plug 'yongrenjie/vim-search-pulse'
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/seoul256.vim'
 Plug 'joshdick/onedark.vim'
@@ -50,6 +50,7 @@ Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'snakemake/snakemake', {'rtp': 'misc/vim', 'branch': 'main'}
 Plug 'chaoren/vim-wordmotion'
+Plug 'pixelneo/vim-python-docstring'
 
 call plug#end()
 
