@@ -86,7 +86,6 @@ nnoremap <C-H> <C-W><C-H>
 nnoremap <leader>hl :set hlsearch! hlsearch?<CR>
 nnoremap <C-Left> :tabprevious<CR>
 nnoremap <C-Right> :tabnext<CR>
-nnoremap <space> za
 nnoremap <C-n> :NERDTreeToggle<CR>
 nnoremap <S-Tab> <<
 inoremap <S-Tab> <C-d>
