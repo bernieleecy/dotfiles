@@ -51,6 +51,7 @@ Plug 'plasticboy/vim-markdown'
 Plug 'snakemake/snakemake', {'rtp': 'misc/vim', 'branch': 'main'}
 Plug 'chaoren/vim-wordmotion'
 Plug 'pixelneo/vim-python-docstring'
+Plug 'junegunn/vim-easy-align'
 
 call plug#end()
 
@@ -86,10 +87,12 @@ nnoremap <C-H> <C-W><C-H>
 nnoremap <leader>hl :set hlsearch! hlsearch?<CR>
 nnoremap <C-Left> :tabprevious<CR>
 nnoremap <C-Right> :tabnext<CR>
-nnoremap <space> za
 nnoremap <C-n> :NERDTreeToggle<CR>
 nnoremap <S-Tab> <<
 inoremap <S-Tab> <C-d>
+
+xmap ga <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
 
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
