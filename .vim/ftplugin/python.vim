@@ -1,6 +1,6 @@
 let g:python_highlight_all = 1
-" Maximum line width for `gq`.
-set textwidth=79
+" Maximum line width for `gq`, updated to 88 to match black
+set textwidth=88
 
 let $PYTHONUNBUFFERED=1
 let g:asyncrun_open=10
