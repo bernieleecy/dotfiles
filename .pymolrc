@@ -7,10 +7,10 @@ set line_as_cylinders, on
 set opaque_background, off
 set dash_color, black
 set dash_transparency, 0.2
-set mesh_color, gray
+set mesh_color, black
 set angle_color, gray
 set angle_size, 0.5
-set mesh_width, 0.2
+set mesh_width, 0.5
 set ray_shadow, 0
 set ray_trace_mode, 1
 set cartoon_fancy_helices, 1
