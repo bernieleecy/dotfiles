@@ -274,6 +274,13 @@ snippet ac "autocite" i
 \autocite{$1}
 endsnippet
 
+snippet dacro "declare acronym" Ab
+\DeclareAcronym{$1}{
+	short = {$2},
+	long = {$3},
+}
+endsnippet
+
 snippet psc "phantomsubcaption" i
 {\phantomsubcaption \label{subfig:$1}}%
 endsnippet
