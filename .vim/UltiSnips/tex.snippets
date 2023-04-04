@@ -132,7 +132,7 @@ gmx grompp -f md.mdp -c ../5-npt/npt.gro -t ../5-npt/npt.cpt -p ../0-top/topol.t
 endsnippet
 
 snippet fig "Figure environment" b
-\begin{figure}[!ht]
+\begin{figure}[htb]
 	\centering
 	\includegraphics[width=$2\linewidth]{$3}
 	\caption{$4} 
@@ -141,7 +141,7 @@ snippet fig "Figure environment" b
 endsnippet
 
 snippet table "Table environment" b
-\begin{table}[H]
+\begin{table}[htb]
 	\centering
 	\begin{tabular}{${1:cols}}
 		\toprule 
@@ -156,7 +156,7 @@ snippet table "Table environment" b
 endsnippet
 
 snippet inptable "Input table from tex file" b
-\begin{table}[H]
+\begin{table}[htb]
 	\centering
 	\input{${1:table tex file}}
 	\caption{$2}
@@ -165,7 +165,7 @@ snippet inptable "Input table from tex file" b
 endsnippet
 
 snippet tabulary "Tabulary environment" b
-\begin{table}[H]
+\begin{table}[htb]
 	\centering
 	\begin{tabulary}{$1\linewidth}{${2:cols}}
 		\toprule
