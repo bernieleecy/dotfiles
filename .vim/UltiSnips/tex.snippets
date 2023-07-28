@@ -360,6 +360,18 @@ snippet double_plot "2 plots side by side" b
 \end{figure}
 endsnippet
 
-snippet divider "divider to help me see breaks between sections" b
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-endsnippet 
+snippet mylisting "mylisting for minted code" b
+\begin{mylisting}[htb]
+\begin{tcbminted}{$1}
+$2
+\end{tcbminted}
+	\caption{$3}
+	\label{lst:$4}
+\end{mylisting}
+endsnippet
+
+snippet tcbminted "tcbminted env only for minted code" b
+\begin{tcbminted}{$1}
+$2
+\end{tcbminted}
+endsnippet

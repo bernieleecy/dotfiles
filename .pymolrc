@@ -15,6 +15,7 @@ set ray_shadow, 0
 set ray_trace_mode, 1
 set cartoon_fancy_helices, 1
 set cartoon_highlight_color, gray70
+set cartoon_side_chain_helper, on
 
 alias pretty_pic, set transparency, 0.4; set sphere_transparency, 0.4
 alias snapshot, ray 1000,1000
