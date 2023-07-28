@@ -4,3 +4,4 @@
 .gitconfig
 .bashrc
 **/.DS_Store
+**/.secrets
