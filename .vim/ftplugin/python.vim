@@ -16,9 +16,5 @@ function RecalcFolds()
 endfunction
 autocmd BufWritePre <buffer> call RecalcFolds()
 
-"" Flake8 configuration
-nnoremap <buffer> <leader>f :call flake8#Flake8()<CR>
-let g:flake8_quickfix_height=10
-
 " remove trailing whitespace in python files
 autocmd BufWritePre * %s/\s\+$//e
